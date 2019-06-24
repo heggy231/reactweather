@@ -1,0 +1,40 @@
+<script type="text/babel" data-presets="env,react">
+// * `componentDidMount`, for example, is called immediately *after* a component is rendered to the DOM.
+    class Clock extends React.Component {
+        componentDidMount() {
+            setInterval(() => {
+                this.time = new Date().toLocaleTimeString();
+            }, 1000);
+        }
+    }
+
+    render() {
+        return (
+            <div className="time">
+                The time is: {this.time}
+            </div>
+        ); 
+    }
+
+
+    // Renders the App component into a div with id 'root'
+    ReactDOM.render(<Clock />, document.querySelector('#root'));
+</script>
+
+
+
+
+
+
+<!--The App component above will be rendered into this-->
+<div id="root"></div>
+
+
+<!--No need to change anything after this line!-->
+<!--No need to change anything after this line!-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.0.0/polyfill.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script src="https://unpkg.com/@babel/preset-env-standalone@7/babel-preset-env.min.js"></script>
+<script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />

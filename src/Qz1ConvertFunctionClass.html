@@ -1,0 +1,56 @@
+// function declaration
+// https://codepen.io/heggy231/pen/oRKbyJ?editors=0010
+// 
+const UserForm = () => {
+  return (
+    <form>
+      <label>Enter a username:</label>
+      <input />
+    </form>
+  );
+}
+
+// class declaration
+class UserForm extends React.Component {
+  render() {
+    return (
+      <form>
+        <label>Enter a username:</label>
+        <input />
+      </form>
+    );
+  }
+}
+
+######################################
+- How to convert from functional component to class based component?
+  1) replace `const` to `class`
+  const UserFom ==> class UserForm
+
+  2) extend to React.Component
+  const UserForm = () => {} // functional 
+  class UserForm extends React.Component {} // class based component
+
+  3) wrap the return stmt inside of render method:
+  render () {
+    return ( // jsx
+      <form>
+        <label>Enter a username:</label>
+        <input />
+      </form>
+    );
+  }
+
+  4) Final:
+  class UserForm extends React.Component {
+    render() {
+      return (
+        <form>
+          <label>Enter a username:</label>
+          <input />
+        </form>
+      ) 
+    }
+  }
+
+  ************************
